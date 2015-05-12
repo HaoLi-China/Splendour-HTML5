@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>场景选择</title>
+		<script type='text/javascript' src='js/publicJs/button.js'></script>
+		<script type="text/javascript" src="js/checkViewJs/jquery.js"></script>
+		<script type="text/javascript" src="js/utilitiesJs/getCookie.js"></script>
+		<script type='text/javascript' src='js/publicJs/isOnline.js'></script>
+		<script type="text/javascript" src="js/publicJs/playSound.js">
+</script>
+	</head>
+	<body background="images/sceneViewImage/CBG2.gif"
+		style="overflow: hidden;" onload="judge();">
+		<video id="monitor" autoplay style="display:none"></video>
+		<canvas id="photo" style="display:none"></canvas>
+
+		<canvas id="canvas1" width="1366" height="768"></canvas>
+
+		<img src="images/sceneViewImage/northamerica2.gif"
+			style="position: absolute; left: 163px; top: 227px; z-index: -1"
+			name="northA0">
+		<img src="images/sceneViewImage/southamerica2.gif"
+			style="position: absolute; left: 312px; top: 423px; z-index: -1"
+			name="southA0">
+		<img src="images/sceneViewImage/africa2.gif"
+			style="position: absolute; left: 598px; top: 349px; z-index: -1"
+			name="africa0">
+		<img src="images/sceneViewImage/europe2.gif"
+			style="position: absolute; left: 560px; top: 114px; z-index: -1"
+			name="europe0">
+		<img src="images/sceneViewImage/china2.gif"
+			style="position: absolute; left: 866px; top: 212px; z-index: -1"
+			name="china0">
+		<img src="images/sceneViewImage/austrilia2.gif"
+			style="position: absolute; left: 989px; top: 490px; z-index: -1"
+			name="austrilia0">
+
+		<img src="images/sceneViewImage/northamerica2.gif"
+			style="position: absolute; left: 163px; top: 227px;" name="northA"
+			onmouseOver=
+	mouseoverNA();
+onmouseOut=
+	mouseoutNA();
+onClick=
+	chooseNA();
+/>
+		<img src="images/sceneViewImage/southamerica2.gif"
+			style="position: absolute; left: 312px; top: 423px;" name="southA"
+			onmouseOver=
+	mouseoverSA();
+onmouseOut=
+	mouseoutSA();
+onClick=
+	chooseSA();
+/>
+		<img src="images/sceneViewImage/africa2.gif"
+			style="position: absolute; left: 598px; top: 349px;" name="africa"
+			onmouseOver=
+	mouseoverAF();
+onmouseOut=
+	mouseoutAF();
+	onClick=
+	chooseAF();
+/>
+		<img src="images/sceneViewImage/europe2.gif"
+			style="position: absolute; left: 560px; top: 114px;" name="europe"
+			onmouseOver=
+	mouseoverEU();
+onmouseOut=
+	mouseoutEU();
+onClick=
+	chooseEU();
+/>
+		<img src="images/sceneViewImage/china2.gif"
+			style="position: absolute; left: 866px; top: 212px;" name="china"
+			onmouseOver=
+	mouseoverCH();
+onmouseOut=
+	mouseoutCH();
+onClick=
+	chooseCH();
+/>
+		<img src="images/sceneViewImage/austrilia2.gif"
+			style="position: absolute; left: 989px; top: 490px;" name="austrilia"
+			onmouseOver=
+	mouseoverAU();
+onmouseOut=
+	mouseoutAU();
+onClick=
+	chooseAU();
+/>
+		<script type="text/javascript" src="js/utilitiesJs/setCookie.js"></script>
+		<script type='text/javascript' src='js/utilitiesJs/getCookie.js'></script>
+		<script type='text/javascript' src='js/sceneViewJs/recoScene.js'></script>
+	</body>
+</html>

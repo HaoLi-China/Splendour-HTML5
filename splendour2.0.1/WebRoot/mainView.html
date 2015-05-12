@@ -1,0 +1,440 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>首页</title>
+		<script   language= "javascript "> 
+function   adjustwindow() 
+{ 
+window.resizeTo(400,400); 
+xoffset=(screen.width-400)/2; 
+yoffset=(screen.height-400)/2; 
+window.moveTo(xoffset,yoffset); 
+} 
+</script> 
+		<script type="text/javascript" src="js/publicJs/toolJS.js"></script>
+		<style type="text/css" media="all">
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	color: #666;
+	font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.contain {
+	padding-top: 20px;
+	width: 600px;
+}
+
+.navbox {
+	position: relative;
+	float: left;
+	z-index: 1000000;
+}
+
+#frame {
+	position: relative;
+	width: 1024px;
+	height: 680px;
+	background: #666;
+	overflow: hidden;
+	cursor: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: none;
+}
+
+#frame div.wall {
+	position: absolute;
+	top: 350px;
+	left: 0;
+	width: 100%;
+}
+
+#tbox-text {
+	position: absolute;
+	top: 0;
+	left: 210px;
+	right: 0;
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 140px;
+	line-height: 0%;
+	height: 100px;
+	font-weight: bold;
+	text-align: center;
+	color:black;
+}
+
+div.wall div {
+	position: absolute;
+	background: #999;
+	top: 42px;
+	left: 0;
+	height: 300px;
+	width: 100%;
+}
+
+#tbox-box {
+top:-350px;
+	left: 0;
+	width: 1024px;
+}
+
+#tbox-spot {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 200%;
+	background: -webkit-gradient(radial, center center, 0, center center, 400, from(rgba(50
+		, 50, 50, 0) ), to(rgba(0, 0, 0, 1) ) );
+}
+
+#invisibleWall {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 200%;
+	background: rgba(0, 0, 0, 0);
+}
+
+
+#mycanvas{
+			background: 0 no-repeat;
+			top:0px;
+			position:absolute;
+			z-index:1000000000;
+			width:1024px;
+			height:663px;
+		}
+
+#shanning {
+	position: relative;
+	width: 1600px;
+	height: 900px;
+	overflow: hidden;
+	z-index: 10000;
+	-webkit-tap-highlight-color: rgba(252, 252, 252, 0);
+	-webkit-user-select: none;
+}
+
+#point {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 200%;
+	z-index: 10000;
+	background: -webkit-gradient(radial, center center, 0, center center, 50, from(rgba(0
+		, 0, 200, 1) ), to(rgba(0, 0, 0, 0) ) );
+}
+
+#buttonArea {
+	position: absolute;
+	top: 580px;
+	left: 850px;
+}
+
+#buttonArea a {
+	-webkit-transition: all 0.3s ease-out;
+	color: #fff;
+	padding: 25px 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	-webkit-box-shadow: 2px 2px 4px #888;
+	font-family: "Bauhaus 93";
+	font-size: 17pt;
+	font-color: "white";
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	color: #000;
+	font-family: Georgia, serif;
+}
+
+h2 {
+	text-shadow: 2px 2px 1px white;
+}
+
+p {
+	line-height: 140%;
+	font-size: 60%;
+	font-weight: bold;
+}
+
+#accordion {
+	margin-left: 300px;
+	margin-top: 90px;
+}
+
+#accordion article {
+	-webkit-transform: perspective(1900px) rotateY(30deg);
+	-webkit-transition: all 0.7s ease-in-out;
+	background: #fff;
+	border: 1px solid #f3f3f3;
+	box-shadow: 0px 5px 15px gray;
+	float: left;
+	height: 400px;
+	margin-left: -230px;
+	padding: 10px;
+	width: 300px;
+	font-size: 150%;
+}
+
+#accordion article:first-child {
+	margin-left: 0px;
+}
+
+#accordion article:hover {
+	-webkit-transform: perspective(0) rotateY(0deg);
+	margin: 0 230px 0 -150px;
+}
+
+div.captions {
+	text-align: center;
+	font-style: normal;
+	font-family: sans-serif;
+	line-height: 1.1;
+	color: #555555;
+}
+
+div.wrapper {
+	padding: 1em;
+	margin: auto auto;
+	background-color: #f0f0f0;
+	border: 1px solid #f0f0f0;
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+}
+
+div.iwrapper {
+	display: block;
+	position: relative;
+	width: 1024px;
+	height: 663px;
+	margin: 0 .5em 0 0;
+	padding: 0px;
+}
+
+div.bwrapper {
+	display: block;
+	position: relative;
+	width: 32px;
+	height: 32px;
+	margin: 0 0 0 .5em;
+	padding: 0px;
+}
+</style>
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<script type="text/javascript" src="js/mainViewJs/cvi_glossy_lib.js"></script>
+		<script type="text/javascript" src="js/mainViewJs/cvi_istack_lib.js"></script>
+		<script type="text/javascript" src="js/publicJs/button.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<link rel="stylesheet" href="css/zhuancss2.css">
+		<link rel="stylesheet" href="css/zhuancss3.css" id="theme">
+
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'zhuancss5' ) + '.css" type="text/css" media="print">' );
+		</script>
+	</head>
+	
+	<body onload= "adjustwindow()" style="overflow:hidden; background:url(images/mainViewImage/bg.gif);">
+		<script src="js/mainViewJs/videoJS1.js"></script>
+		<script src="js/mainViewJs/videoJS2.js"></script>
+		<script src="js/mainViewJs/videoJS3.js"></script>
+		<video src="video/help.mp4" id="video" style="display:none">
+		</video>
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"  style="background:url(images/mainViewImage/bg.gif);">
+				<div class="controls" id="controls" style="width:1366px; height:768px; z-index:1;">
+							<img src="images/mainViewImage/leaf1-1.gif" name="start" id="start"
+								style="position: absolute; top: 110px; left: 240px;"
+								onmouseOver="mouseOverstart();" onmouseOut="mouseOutstart();" 
+								onClick="tostart();"/>
+							<a class="rightt" href="#"><img src="images/mainViewImage/leaf2-1.gif" name="help" id="help"
+								style="position: absolute; top: 500px; left: 370px;"
+								onmouseOver="mouseOverhelp();" onmouseOut="mouseOuthelp();" onClick="fadeOutsha(1);"
+								 /></a>
+							<a class="right" href="#"><img src="images/mainViewImage/leaf2-1.gif" name="aboutgame" id="about"
+								style="position: absolute; top: 460px; left: 580px;"
+								onmouseOver="mouseOveraboutgame();"
+								onmouseOut="mouseOutaboutgame();" onClick="fadeOutsha2(1);" /></a>
+						</div>
+						<div class="controls" style="width:136px; height:768px; left:1230px; top:0px;">
+							<a class="left" href="#"><img src="images/mainViewImage/backtomain1.png" name="backH" id="fabouttmain"
+								style="position: absolute; top: 550px; left: 0px; display:none;"
+								onmouseOver="mouseOverbackH();"
+								onmouseOut="mouseOutbackH();" onClick="fadeInsha2(1);"/></a>
+							<a class="leftt" href="#"><img src="images/mainViewImage/backtomain1.png" name="backH2" id="fhelptmain"
+								style="position: absolute; top: 550px; left: 0px; display:none;"
+								onmouseOver="mouseOverbackH2();"
+								onmouseOut="mouseOutbackH2();" onClick="fadeInsha(1);"/></a>
+						</div>
+			</div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section style="position:absolute; top:0px;">
+					
+					<div id="frame">
+						<div id="shanning">
+							<div></div>
+							<div id="point"></div>
+							<canvas id="mycanvas"></canvas>
+						</div>
+						<div class="wall">
+							<div id="tbox-box">
+								<img src="images/mainViewImage/leaf1.png" style="position:absolute; top:39px; left:79px;"/>
+								<p style="font-size:200%; font-weight:bold; font-family:华文琥珀; color:blue; position:absolute; top:130px; left:170px;">start</p>
+								<img src="images/mainViewImage/tree.png" />
+							</div>
+							<p id="tbox-text">
+								Splendour
+							</p>
+							<div>
+								<img src="images/mainViewImage/leaf2.png" style="position:absolute; top:40px; left:204px;" />
+								<p style="font-size:200%; font-weight:bold; font-family:华文琥珀; color:blue; position:absolute; top:85px; left:250px;">help</p>
+								<img src="images/mainViewImage/leaf3.png" style="position:absolute; top:2px; left:410px;" />
+								<p style="font-size:200%; font-weight:bold; font-family:华文琥珀; color:blue; position:absolute; top:50px; left:440px;">about</p>
+								<p style="font-size:200%; font-weight:bold; font-family:华文琥珀; color:blue; position:absolute; top:70px; left:440px;">game</p>
+								<img src="images/mainViewImage/chrunk1.gif" />
+							</div>
+						</div>
+						<div id="invisibleWall">
+							<img src="images/mainViewImage/tree.png" />
+						</div>
+
+						<div id="tbox-spot"></div>
+
+					</div>
+					<script type="text/javascript" language="javascript"
+						charset="utf-8" src="js/mainViewJs/shadow-point.js"></script>
+						
+				</section>
+				<section style="background:url(images/mainViewImage/helpB.gif);">
+					<div id="accordion">
+						<p
+							style="position: absolute; top: 100px; left: 640px; font-size: 70px; text-shadow: 2px 2px 1px white; color: #000;">
+							Splendour
+						</p>
+						<article
+							style="background:url(images/mainViewImage/fileB11.gif); background-repeat:no-repeat;">
+						<h2 style="font-family: 隶书">
+							关于游戏
+						</h2>
+						<br />
+						<p style="font-family: 隶书; color: #000;">
+							独特的操作：以手势捕捉蝴蝶，食指拇指捏合即为捕捉动作。
+						</p>
+						<p style="font-family: 隶书; color: #000;">
+							丰富的道具
+						</p>
+						<img src="images/mainViewImage/removebeeScript.png" />
+						<img src="images/mainViewImage/butterflygodScript.png" />
+						<img src="images/mainViewImage/netScript.png" />
+						<img src="images/mainViewImage/clockScript.png" />
+						<img src="images/mainViewImage/lureScript.png" />
+						<p style="font-family: 隶书; color: #000;">
+							丰厚的金币，精美的标本，多样的等级，快来一起捉蝴蝶吧。
+						</p>
+						</article>
+						<article
+							style="background:url(images/mainViewImage/fileB22.gif); background-repeat:no-repeat;">
+						<h2>
+							über das Spiel
+						</h2>
+						<br />
+						<p style="color: #000;">
+							Einzigartige Operation:Durch Geste die Schmetterlinge zu fangen,
+							das Kneten von dem Zeigefinger und dem Daumen ist die Aktion der
+							Erfassen.
+						</p>
+						<p style="color: #000;">
+							Reiche Requisiten
+						</p>
+						<img src="images/mainViewImage/removebeeScript.png" />
+						<img src="images/mainViewImage/butterflygodScript.png" />
+						<img src="images/mainViewImage/netScript.png" />
+						<img src="images/mainViewImage/clockScript.png" />
+						<img src="images/mainViewImage/lureScript.png" />
+						<p style="color: #000;">
+							Reiche Goldmünzen, feine Praeparate, vielartige Stufen. Komm und
+							fang die Schmetterlinge zusammen！
+						</p>
+						</article>
+						<article
+							style="background:url(images/mainViewImage/fileB33.gif); background-repeat:no-repeat;">
+						<h2>
+							About Game
+						</h2>
+						<br />
+						<p style="color: #000;">
+							Special operation: catching butterflies using the gesture, knead
+							your forefinger and your thomb thgether will make one catch.
+						</p>
+						<p style="color: #000;">
+							Various of tools
+						</p>
+						<img src="images/mainViewImage/removebeeScript.png" />
+						<img src="images/mainViewImage/butterflygodScript.png" />
+						<img src="images/mainViewImage/netScript.png" />
+						<img src="images/mainViewImage/clockScript.png" />
+						<img src="images/mainViewImage/lureScript.png" />
+						<p style="color: #000;">
+							Generous fortune, wonderful samples, various of levels, what are
+							you waiting for, come and join us.
+						</p>
+						</article>
+					</div>
+				</section>
+				<section style="background:#D6D6D6;"id="BB">
+					<script src="js/mainViewJs/videoJS4.js"></script>
+				</section>
+			</div>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+
+		<script src="js/mainViewJs/drawButterfly.js"></script>
+		<script src="js/publicJs/zhuanjs1.js"></script>
+		<script src="js/publicJs/zhuanjs2.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				theme: Reveal.getQueryHash().theme || 'zhuancss5', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				dependencies: [
+					{ src: 'js/publicJs/zhuanjs3.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'js/publicJs/zhuanjs4.js', condition: function() { return !document.body.classList; } },
+					{ src: 'js/publicJs/zhuanjs5.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'js/publicJs/zhuanjs6.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'js/publicJs/zhuanjs7.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'js/publicJs/zhuanjs8.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+			
+		</script>
+	</body>
+</html>

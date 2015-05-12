@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>食指校验界面</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link type='text/css' href='css/checkViewCss/basic.css'
+			rel='stylesheet' media='screen' />
+		<style type="text/css" media="screen">
+			body {
+				font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+			}
+
+			canvas {
+				background-color: transparent;
+				top: 0;
+				left: 0;
+				position: absolute;
+			}
+
+			canvas.resize-ne {
+				cursor: ne-resize;
+			}
+
+			canvas.resize-se {
+				cursor: se-resize;
+			}
+
+			canvas.resize-sw {
+				cursor: sw-resize;
+			}
+
+			canvas.resize-nw {
+				cursor: nw-resize;
+			}
+
+			canvas.move {
+				cursor: move;
+			}
+
+			canvas.default {
+				cursor: default;
+			}
+		</style>
+		<script type="text/javascript" src="js/publicJs/button.js"></script>
+		<script type="text/javascript" src="js/checkViewJs/jquery.js"></script>
+		<script type="text/javascript" src="js/utilitiesJs/getCookie.js"></script>
+		<script type="text/javascript" src="js/publicJs/isOnline.js"></script>
+		<script type="text/javascript" src="js/publicJs/playSound.js"></script>		
+	</head>
+	<body id="canvasdemo" style="overflow: hidden;" width="100%"
+		height="100%" onload="judge();">
+		
+		
+		<canvas id="photo" style="display:none"></canvas>
+		<center>
+			<div>
+				<video id="monitor" width="1024px" autoplay></video>
+			</div>
+		</center>
+		<canvas id="canvid2" width="1366px" height="768px">
+		</canvas>
+		
+		<img src="images/checkViewImage/check.png" style="position:absolute; left:0px; top:0px;"/>
+		
+		<canvas id="canvid1"></canvas>
+		<img src="images/checkViewImage/checkbgf.png" style="position:absolute; left:0px; top:0px;"/>
+		<img name="b4" src="images/checkViewImage/tip1.png" style="position:absolute; left:435px; top:400px;" onmouseOver="mouseOverT();" onmouseOut="mouseOutT();"  onclick="CC();" />
+		
+		<div id="basic-modal-content">
+			<h2 align=center>
+				食指色块校验
+			</h2>
+			<br>
+			<p align=center>
+				将羽毛拖开（羽毛是可以拖拽调整大小和旋转的呦）。
+			</p>
+			<br>
+			<p align=center>
+				食指套上具有鲜艳颜色的物体，分别将屏幕中央校验区域中左边和上边的蝴蝶拖动到右边和下边。
+			</p>
+		</div>
+		<script type='text/javascript'
+			src='js/checkViewJs/jquery.simplemodal.js'></script>
+		<script type='text/javascript' src='js/checkViewJs/basic.js'></script>
+		<script type='text/javascript' src='js/utilitiesJs/setCookie.js'></script>
+	</body>
+	<script type='text/javascript' src='js/checkViewJs/fingerCheck.js'></script>
+</html>

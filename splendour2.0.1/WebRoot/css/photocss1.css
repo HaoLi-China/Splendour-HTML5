@@ -1,0 +1,25 @@
+@import url("screen.css") screen;
+@import url("print.css") print;
+@import url("ie.css");
+
+/*************** for photos *******************/
+
+.photos img.whiteShadow {
+	width: 70px;
+	height: 70px;
+	transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-mozilla-transition-duration: 0.2s;
+}
+
+.photos a img {
+	border: 0px;
+}
+
+.photos img.whiteShadow:hover {
+	/*width: 100px;
+	height: 100px;*/
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	z-index: 9999;
+}

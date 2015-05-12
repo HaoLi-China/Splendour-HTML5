@@ -1,0 +1,233 @@
+﻿<html>
+  <head>
+    <title>登录界面</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="js/checkViewJs/jquery.js">
+</script>
+		<script type="text/javascript" src="js/utilitiesJs/setCookie.js">
+</script>
+		<script type="text/javascript" src="js/publicJs/button.js">
+</script>
+		
+		<script type="text/javascript" src="js/loginJs/toolCheck.js">
+</script>
+		<script type="text/javascript" src="js/loginJs/loginCheck.js">
+</script>
+		<script type="text/javascript" src="js/loginJs/registerCheck.js">
+</script>
+    <!-- The leaves.css file animates the leaves -->
+    <link rel="stylesheet" href="css/leaf.css" type="text/css" media="screen" charset="utf-8">
+    <!-- The leaves.js file creates the leaves -->
+    <script src="js/loginJs/leaf.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		* { margin:0;
+			padding:0;
+		}
+		.navbox {
+			position: relative;
+			float: left;
+		}
+
+		ul.nav {
+			list-style: none;
+			display: block;
+			width: 400px;
+			position: relative;
+			top: 100px;
+			left: 100px;
+			padding: 60px 0 60px 0;
+			-webkit-background-size: 50% 100%;
+		}
+
+		li {
+			margin: 15px 0 0 0;
+			font-family:隶书;
+			}
+
+		ul.nav li a {
+			-webkit-transition: all 0.3s ease-out;
+			background: 0;
+			font-family:隶书;
+			font-size:20px;
+			font-weight:bold;
+			color:white;
+			padding: 20px 15px 20px 15px;
+			-webkit-border-top-right-radius: 10px;
+			-webkit-border-top-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			-webkit-border-bottom-left-radius: 10px;
+			width: 300px;
+			display: block;
+			text-decoration: none;
+			-webkit-box-shadow: 4px 4px 8px #888;
+		}
+
+		ul.nav li a:hover {
+			background: #ebebeb;
+			color: black;
+			padding: 25px 30px 25px 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		function SetOpacity(ev, v) {
+			ev.filters ? ev.style.filter = 'alpha(opacity=' + v + ')'
+					: ev.style.opacity = v / 100;
+		}
+		
+		function fadeInbutterfly(speed, opacity) {
+			var elem = document.getElementById('butterfly');
+			speed = speed || 20;
+			opacity = opacity || 100;
+			elem.style.display = 'block';
+			SetOpacity(elem, 0);
+			var val = 0;
+			(function() {
+				SetOpacity(elem, val);
+				val += 5;
+				if (val <= opacity) {
+					setTimeout(arguments.callee, speed)
+				}
+			})();
+		}
+		function fadeOutbutterfly(speed, opacity) {
+			var elem = document.getElementById('butterfly');
+			speed = speed || 20;
+			opacity = opacity || 0;
+			var val = 100;
+			(function() {
+				SetOpacity(elem, val);
+				val -= 2;
+				if (val >= opacity) {
+					setTimeout(arguments.callee, speed);
+				} else if (val < 0) {
+					elem.style.display = 'none';
+				}
+			})();	
+		}
+		function fadeInbutterfly1(speed, opacity) {
+			var elem = document.getElementById('butterfly1');
+			speed = speed || 20;
+			opacity = opacity || 100;
+			elem.style.display = 'block';
+			SetOpacity(elem, 0);
+			var val = 0;
+			(function() {
+				SetOpacity(elem, val);
+				val += 5;
+				if (val <= opacity) {
+					setTimeout(arguments.callee, speed)
+				}
+			})();
+		}
+		function fadeOutbutterfly1(speed, opacity) {
+			var elem = document.getElementById('butterfly1');
+			speed = speed || 20;
+			opacity = opacity || 0;
+			var val = 100;
+			(function() {
+				SetOpacity(elem, val);
+				val -= 2;
+				if (val >= opacity) {
+					setTimeout(arguments.callee, speed);
+				} else if (val < 0) {
+					elem.style.display = 'none';
+				}
+			})();	
+		}
+		function fadeInbutterfly2(speed, opacity) {
+			var elem = document.getElementById('butterfly2');
+			speed = speed || 20;
+			opacity = opacity || 100;
+			elem.style.display = 'block';
+			SetOpacity(elem, 0);
+			var val = 0;
+			(function() {
+				SetOpacity(elem, val);
+				val += 5;
+				if (val <= opacity) {
+					setTimeout(arguments.callee, speed)
+				}
+			})();
+		}
+		function fadeOutbutterfly2(speed, opacity) {
+			var elem = document.getElementById('butterfly2');
+			speed = speed || 20;
+			opacity = opacity || 0;
+			var val = 100;
+			(function() {
+				SetOpacity(elem, val);
+				val -= 2;
+				if (val >= opacity) {
+					setTimeout(arguments.callee, speed);
+				} else if (val < 0) {
+					elem.style.display = 'none';
+				}
+			})();	
+		}
+		function flashbutterfly(){
+			fadeInbutterfly(60);
+			setTimeout("fadeOutbutterfly(60)", 2000);
+			setTimeout("fadeInbutterfly1(60)", 4500);
+			setTimeout("fadeOutbutterfly1(60)", 6500);
+			setTimeout("fadeInbutterfly2(60)", 9000);
+			setTimeout("fadeOutbutterfly2(60)", 11000);
+			
+		}
+	</script>
+</head>
+<body onload="flashbutterfly();" style="overflow:hidden;">
+    <div id="container">
+	<img id="butterfly" src="images/loginViewImage/flashb.png" style="display:none; position:absolute; width:250px; height:250px; left:10%; top:50%;" />
+	<img id="butterfly1" src="images/loginViewImage/flashb1.png" style="display:none; position:absolute; width:200px; height:200px; left:40%; top:20%;" />
+	<img id="butterfly2" src="images/loginViewImage/flashb2.png" style="display:none; position:absolute; width:180px; height:180px; left:80%; top:5%;" />
+      <!-- The container is dynamically populated using the init function in leaves.js -->
+      <!-- Its dimensions and position are defined using its id selector in leaves.css -->
+		<div id="leafContainer"></div>	  
+		<div id="loginDiv">
+			<div style="position:absolute; left:50%;"class="navbox">
+				<ul class="nav">
+					<li><a href="#">用户名: <input type="text" id="username"></a></li>
+					<li><a href="#">密 码 : <input type="password" id="userpass"></a></li>
+					<li><a href="#">验证码: <input type="text" id="checkcode" style="" /></a></li>
+					<img alt="code..." id="randImage" src="jsp/image.jsp" width="60" height="20" border="1">&nbsp;&nbsp;<a href="javascript:loadImage(1);"><font class=pt70 color=ff0000>看不清楚</font></a></li>
+					<div id="lr" style="font-size: 20; color: white; position: absolute; top: 310px; left: 150px;"></div>
+				</ul>
+			</div>	
+			<img src="images/loginViewImage/lbg.png" style="position:absolute; top:20%; left:80%; width:300px; height:400px;">
+			<img src="images/loginViewImage/l.png" style="position:absolute; top:32%; left:83%; width:190px; height:170px;" name="dologin"
+					style="position: absolute; top: -10px; left: 300px;"
+					onmouseOver="mouseOverlogin();" onmouseOut="mouseOutlogin();"
+					onclick="doLogin();" />
+			<img src="images/loginViewImage/r.png" style="position:absolute; top:27%; left:92%; width:115px; height:100px;" name="goregist"
+					style="position: absolute; top: 20px; left: 270px;"
+					onmouseOver="mouseOverregist();" onmouseOut="mouseOutregist();"
+					onclick="goRegister();" />
+			<img src="images/loginViewImage/re.png" style="position:absolute; top:53%; left:87%; width:145px; height:130px;" name="doreset"
+					style="position: absolute; top: 65px; left: 295px;"
+					onmouseOver="mouseOverreset();" onmouseOut="mouseOutreset();"
+					onclick="FormReset();" />
+		</div>
+		
+		<div id="registerDiv" style="display: none;" >
+			<div style="position:absolute; left:50%;"class="navbox">
+				<ul class="nav">
+					<li><a href="#">用户名 : <input type="text" id="newname"></a></li>
+					<li><a href="#">密 码 : <input type="password" id="newpass"></a></li>
+					<li><a href="#">重复密码:<input type="password" id="againpass"></a></li>
+					<li><a href="#">验证码: <input type="text" id="r_checkcode" style="" /></a></li>
+					<img alt="code..." id="r_randImage" src="jsp/image.jsp" width="60" height="20" border="1">&nbsp;&nbsp;<a href="javascript:loadImage(2);"><font class=pt70 color=ff0000>看不清楚</font></a>
+					<img src="images/loginViewImage/register1.png" name="doregist"
+						style="position: absolute; top: 120px; left: 370px;"
+						onmouseOver="mouseOverregister();" onmouseOut="mouseOutregister();"
+						onclick="doRegister();" />
+					<img src="images/loginViewImage/cancel1.png" name="cancel"
+						style="position: absolute; top: 240px; left: 370px;"
+						onmouseOver="mouseOverback();" onmouseOut="mouseOutback();"
+						onclick="doCancel();" />
+					<div id="rr" style="font-size: 20; color: white; position: absolute; top: 380px; left: 150px;"></div>
+				</ul>
+			</div>	
+		</div>
+    </div>
+  </body>
+</html>

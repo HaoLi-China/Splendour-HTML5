@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>对战模式</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type='text/javascript'
+			src='js/gameForTwoJs/butterflySourse.js'>
+</script>
+		<script type="text/javascript" src="js/checkViewJs/jquery.js">
+</script>
+		<script type="text/javascript" src="js/utilitiesJs/getCookie.js">
+</script>
+		<script type="text/javascript" src="js/utilitiesJs/setCookie.js">
+</script>
+		<script type="text/javascript" src="js/gameViewJs/updateDatabase.js">
+</script>
+		<script type='text/javascript' src='js/publicJs/isOnline.js'>
+</script>
+<script type="text/javascript" src="js/publicJs/playSound.js">
+</script>
+
+	</head>
+	<body
+		style="background: url(images/gameViewImage/challengegamebackground.gif); overflow: hidden;"
+		onload="startServer()">
+		<canvas id="photo" style="display:none"></canvas>
+		<center>
+			<video id="monitor" autoplay width="1024"></video>
+		</center>
+		<img src="images/gameViewImage/africascene.png"
+			style="position: absolute; top: 0px; left: 171px;">
+		<img src="images/gameViewImage/timebar.png"
+			style="position: absolute; top: 0px; left: 387px;" />
+		<img src="images/gameViewImage/score1.png"
+			style="position: absolute; top: 580px; left: 171px;" />
+		<img src="images/gameViewImage/score2.png"
+			style="position: absolute; top: 580px; left: 857px;" />
+		<div id="time"
+			style="position: absolute; top: 30px; left: 635px; font-family: verdana; font-size: 400%; color: red">
+			60
+		</div>
+		<div id="score1"
+			style="position: absolute; top: 620px; left: 205px; font-family: verdana; font-size: 200%; color: red">
+			000
+		</div>
+		<div id="score2"
+			style="position: absolute; top: 620px; left: 1103px; font-family: verdana; font-size: 200%; color: red">
+		</div>
+		<div id="name1"
+			style="position: absolute; top: 623px; left: 330px; font-family: verdana; font-size: 150%; color: red">
+		</div>
+		<div id="name2"
+			style="position: absolute; top: 623px; left: 920px; font-family: verdana; font-size: 150%; color: red">
+		</div>
+
+		<center>
+			<canvas id="canvas" width="1024" height="768"
+				style="position:absolute;top:0;left:171;"></canvas>
+		</center>
+
+		<center>
+			<canvas id="canvas1" width="1024" height="768"
+				style="position:absolute;top:0;left:171;"></canvas>
+		</center>
+		
+		<script type='text/javascript' src='js/gameForTwoJs/butterFlying.js'>
+</script>
+		<script type='text/javascript' src='js/gameForTwoJs/butterCaught.js'>
+</script>
+		 <script type='text/javascript' src='js/gameForTwoJs/client.js'>
+</script> 
+		<script type='text/javascript' src='js/gameForTwoJs/recoGFT.js'>
+</script>
+		<script type='text/javascript' src='js/gameForTwoJs/time.js'>
+</script>
+		<script type="text/javascript" src="js/gameForTwoJs/drawAni2.js">
+</script>
+	</body>
+</html>

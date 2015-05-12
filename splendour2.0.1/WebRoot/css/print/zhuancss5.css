@@ -1,0 +1,87 @@
+
+.nestedarrow, 
+.controls a, 
+.reveal .progress, 
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display:none;
+}
+
+a:link, 
+a:visited {
+	color: #000 !important;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.reveal a:link:after, 
+.reveal a:visited:after {
+	content: " (" attr(href) ") ";
+	color: #222 !important;
+	
+}
+
+
+.reveal .slides {
+	position: static;
+	width: auto;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	padding:0px auto;
+
+	overflow: visible;
+	display: block;
+
+	text-align: center;
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+.reveal .slides>section, .reveal .slides>section>section, 
+.reveal .slides>section.past, .reveal .slides>section.future,
+.reveal.linear .slides>section, .reveal.linear .slides>section>section,
+.reveal.linear .slides>section.past, .reveal.linear .slides>section.future {
+	
+	visibility: visible;
+	position: static;
+	width: 90%;
+	height: auto;
+	display: block;
+	overflow: visible;
+
+	left: 0%;
+	top: 0%;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding: 0px 0px;
+
+	opacity: 1;
+
+	-webkit-transform-style: flat;
+	   -moz-transform-style: flat;
+	    -ms-transform-style: flat;
+	        transform-style: flat;
+
+	-webkit-transform: none;
+	   -moz-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+}
+.reveal section {
+	page-break-after: always !important; 
+	display: block !important;
+}
+.reveal section.stack {
+	page-break-after: avoid !important; 
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="D:/eclipse(java)/mini_QQ/mysql-connector-java-5.1.5-bin.jar"/>
+	<classpathentry kind="lib" path="D:/软件/apache-tomcat-7.0.29/lib/catalina.jar"/>
+	<classpathentry kind="lib" path="D:/软件/apache-tomcat-7.0.29/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/软件/apache-tomcat-7.0.29/lib/tomcat-coyote.jar"/>
+	<classpathentry kind="lib" path="D:/软件/apache-tomcat-7.0.29/lib/tomcat-util.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>
